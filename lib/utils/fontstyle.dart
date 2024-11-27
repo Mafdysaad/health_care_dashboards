@@ -78,4 +78,11 @@ abstract class Fontstyle {
     fontWeight: FontWeight.w400,
     height: 0,
   );
+  static TextStyle mulish_regular32 = const TextStyle(
+    color: Colors.white,
+    fontSize: 32,
+    fontFamily: 'Mulish',
+    fontWeight: FontWeight.w400,
+    height: 0,
+  );
 }

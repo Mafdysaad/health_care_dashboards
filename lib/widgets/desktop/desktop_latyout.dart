@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/drawer/drawer.dart';
-import 'package:healthcare_dashborad/widgets/desktop/widget/moble_layout/moblie_layour.dart';
+import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/moblie_layour.dart';
 
 class DesktopLatyout extends StatelessWidget {
   const DesktopLatyout({super.key});
@@ -10,7 +10,8 @@ class DesktopLatyout extends StatelessWidget {
     return Row(
       children: [
         Custom_drawer(),
-        const MobileLayour(),
+        const Expanded(flex: 3, child: MobileLayour()),
+        const Expanded(flex: 2, child: const SizedBox()),
       ],
     );
   }
