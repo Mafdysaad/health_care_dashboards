@@ -11,7 +11,7 @@ class DesktopLatyout extends StatelessWidget {
       children: [
         Custom_drawer(),
         const Expanded(flex: 3, child: MobileLayour()),
-        const Expanded(flex: 2, child: const SizedBox()),
+        const Expanded(flex: 2, child: SizedBox()),
       ],
     );
   }

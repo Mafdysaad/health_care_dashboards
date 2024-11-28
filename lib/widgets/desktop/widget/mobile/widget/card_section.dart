@@ -7,9 +7,9 @@ import 'package:healthcare_dashborad/utils/fontstyle.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/header_card.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/reat.dart';
 
-class Cards extends StatelessWidget {
-  const Cards({super.key, required this.obverview});
-  final HealthDescraption obverview;
+class CardSection extends StatelessWidget {
+  const CardSection({super.key, required this.overview});
+  final HealthDescraption overview;
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,8 @@ class Cards extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HeaderCard(
-              title: obverview.Ttitle,
-              image: obverview.icon,
+              title: overview.Ttitle,
+              image: overview.icon,
             ),
             const SizedBox(
               height: 20,
@@ -45,7 +45,7 @@ class Cards extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  obverview.Quantity,
+                  overview.Quantity,
                   style: Fontstyle.mulish_regular32
                       .copyWith(color: const Color(0xFF272927)),
                 ),
@@ -53,7 +53,7 @@ class Cards extends StatelessWidget {
                   width: 8,
                 ),
                 Text(
-                  obverview.Unit,
+                  overview.Unit,
                   style: Fontstyle.mulish_boled16,
                 ),
               ],
@@ -61,8 +61,13 @@ class Cards extends StatelessWidget {
             const SizedBox(
               height: 17,
             ),
-            Reat(color: obverview.color, text: obverview.reate),
-            SvgPicture.asset(obverview.image)
+            Reat(color: overview.color, text: overview.reate),
+            SizedBox(
+                width: double.infinity,
+                child: SvgPicture.asset(
+                  overview.image,
+                  fit: BoxFit.fill,
+                ))
           ],
         ),
       ),
