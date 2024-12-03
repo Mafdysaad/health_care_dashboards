@@ -4,6 +4,11 @@ class Assets {
 
   /// Assets for assetsImagesBlood Pressure
   /// assets/images/Blood Pressure.svg
+  static const String assetsImagesBloodPressure =
+      "assets/images/Blood_Pressure.svg";
+
+  /// Assets for assetsImagesBloodPresse
+  /// assets/images/blood_presse.png
   static const String assetsImagesBloodPresse =
       "assets/images/blood_presse.png";
 
@@ -27,8 +32,16 @@ class Assets {
   /// assets/images/Frame.svg
   static const String assetsImagesFrame = "assets/images/Frame.svg";
 
+  /// Assets for assetsImagesGradual
+  /// assets/images/Gradual.png
+  static const String assetsImagesGradual = "assets/images/Gradual.png";
+
   /// Assets for assetsImagesHeart
   /// assets/images/heart.svg
+  static const String assetsImagesHeart = "assets/images/heart.svg";
+
+  /// Assets for assetsImagesHeartRate
+  /// assets/images/heart_rate.png
   static const String assetsImagesHeartRate = "assets/images/heart_rate.png";
 
   /// Assets for assetsImagesLogout
