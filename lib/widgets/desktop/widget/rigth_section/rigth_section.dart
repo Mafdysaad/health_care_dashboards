@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/BmiCalculatorsection_section.dart';
+import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/Body_Measurements.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/rigth_section_header.dart';
 
 class RigthSection extends StatelessWidget {
@@ -30,7 +31,17 @@ class RigthSection extends StatelessWidget {
             SizedBox(
               height: 38,
             ),
-            BmiCalculatorsection()
+            BmiCalculatorsection(),
+            SizedBox(
+              height: 40,
+            ),
+            Divider(
+              color: Color(0xFF4E4E4E),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            BodyMeasurements(),
           ],
         ),
       ),

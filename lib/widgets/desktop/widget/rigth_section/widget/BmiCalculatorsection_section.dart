@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/bodymass.dart';
 
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/higthandwigth_section.dart';
 
@@ -29,7 +30,7 @@ class BmiCalculatorsection extends StatelessWidget {
             ),
           ],
         )),
-        // Expanded(flex: 2, child: Bodymass())
+        Expanded(flex: 2, child: Bodymass())
       ],
     );
   }
