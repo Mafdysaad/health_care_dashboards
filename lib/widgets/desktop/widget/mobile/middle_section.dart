@@ -10,8 +10,8 @@ import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/chart_
 
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/title_header.dart';
 
-class MobileLayour extends StatelessWidget {
-  const MobileLayour({super.key});
+class MiddleSection extends StatelessWidget {
+  const MiddleSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,19 +43,19 @@ class MobileLayour extends StatelessWidget {
     ];
     return Container(
       color: const Color.fromARGB(244, 242, 238, 227),
-      child: Padding(
-        padding: const EdgeInsets.only(top: 52, right: 40, left: 40),
-        child: CustomScrollView(
-          shrinkWrap: false,
-          slivers: [
-            const SliverToBoxAdapter(child: TitleHeader()),
-            const SliverToBoxAdapter(
-              child: SizedBox(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(
+              top: 52,
+              right: MediaQuery.of(context).size.width < 1200 ? 20 : 40,
+              left: MediaQuery.of(context).size.width < 1200 ? 20 : 40),
+          child: Column(
+            children: [
+              const TitleHeader(),
+              const SizedBox(
                 height: 20,
               ),
-            ),
-            SliverToBoxAdapter(
-              child: Row(
+              Row(
                 children: [
                   Expanded(
                       child: CardSection(
@@ -77,26 +77,19 @@ class MobileLayour extends StatelessWidget {
                   )),
                 ],
               ),
-            ),
-            const SliverToBoxAdapter(
-              child: SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-            ),
-            const SliverFillRemaining(
-                hasScrollBody: false, child: ChartSection()),
-            const SliverToBoxAdapter(
-              child: SizedBox(
+              const ChartSection(),
+              const SizedBox(
                 height: 40,
               ),
-            ),
-            const SliverToBoxAdapter(child: UpcomingSection()),
-            const SliverToBoxAdapter(
-              child: SizedBox(
+              const UpcomingSection(),
+              const SizedBox(
                 height: 40,
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

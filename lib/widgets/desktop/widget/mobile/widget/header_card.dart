@@ -33,9 +33,13 @@ class HeaderCard extends StatelessWidget {
         const SizedBox(
           width: 16,
         ),
-        Text(
-          title,
-          style: Fontstyle.mulish_semiboled16(context),
+        Flexible(
+          child: FittedBox(
+            child: Text(
+              title,
+              style: Fontstyle.mulish_semiboled16(context),
+            ),
+          ),
         ),
       ],
     );

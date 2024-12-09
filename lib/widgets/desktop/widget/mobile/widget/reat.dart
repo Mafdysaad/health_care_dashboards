@@ -18,9 +18,11 @@ class Reat extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
           )),
-      child: Text(
-        'Normal',
-        style: Fontstyle.mulish_semiboled12(context),
+      child: FittedBox(
+        child: Text(
+          'Normal',
+          style: Fontstyle.mulish_semiboled12(context),
+        ),
       ),
     );
   }

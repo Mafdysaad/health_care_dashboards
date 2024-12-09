@@ -15,6 +15,8 @@ class ChartSection extends StatelessWidget {
       const Exercises(color: Color(0xFFD08626), title: 'Meditation'),
     ];
     return Container(
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.height * 0.5,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
@@ -38,7 +40,7 @@ class ChartSection extends StatelessWidget {
               const SizedBox(
                 height: 26,
               ),
-              const Chart(),
+              const Expanded(flex: 3, child: Chart()),
               const SizedBox(
                 height: 26,
               ),

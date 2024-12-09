@@ -27,26 +27,44 @@ class UpcomingSection extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Upcoming Appointment',
-              style: Fontstyle.mulish_boled20(context),
-            ),
-            Container(
-                padding: const EdgeInsets.all(8),
-                decoration: ShapeDecoration(
-                  color: const Color(0xFFD0FAFF),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
+            Flexible(
+              child: FittedBox(
+                child: Text(
+                  'Upcoming Appointment',
+                  style: Fontstyle.mulish_boled20(context),
                 ),
-                child: Center(
-                  child: Text(
-                    'August 14, 2021',
-                    style: Fontstyle.mulish_boled12(context),
+              ),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Flexible(
+              child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: ShapeDecoration(
+                    color: const Color(0xFFD0FAFF),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
-                )),
-            Text(
-              'Consultation with Dr. James',
-              style: Fontstyle.mulish_regular16(context),
+                  child: Center(
+                    child: FittedBox(
+                      child: Text(
+                        'August 14, 2021',
+                        style: Fontstyle.mulish_boled12(context),
+                      ),
+                    ),
+                  )),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Flexible(
+              child: FittedBox(
+                child: Text(
+                  'Consultation with Dr. James',
+                  style: Fontstyle.mulish_regular16(context),
+                ),
+              ),
             )
           ],
         ),

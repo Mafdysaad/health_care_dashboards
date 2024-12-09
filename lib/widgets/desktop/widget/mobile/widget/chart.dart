@@ -8,7 +8,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 2, child: BarChart(getdata(context)));
+    return BarChart(getdata(context));
   }
 }
 

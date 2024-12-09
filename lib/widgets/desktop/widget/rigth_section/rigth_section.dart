@@ -8,49 +8,48 @@ class RigthSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const ShapeDecoration(
-        color: Color(0xFF2F2F2F),
-        shape: RoundedRectangleBorder(
-          side: BorderSide(
-            width: 1,
-            strokeAlign: BorderSide.strokeAlignOutside,
-            color: Color(0xFFF1F1F1),
-          ),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(40),
-            bottomLeft: Radius.circular(40),
+    return SingleChildScrollView(
+      child: Container(
+        decoration: ShapeDecoration(
+          color: const Color(0xFF2F2F2F),
+          shape: RoundedRectangleBorder(
+            side: const BorderSide(
+              width: 1,
+              strokeAlign: BorderSide.strokeAlignOutside,
+              color: Color(0xFFF1F1F1),
+            ),
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(40),
+              topRight: MediaQuery.of(context).size.width <= 1200
+                  ? const Radius.circular(40)
+                  : const Radius.circular(0),
+              bottomLeft: MediaQuery.of(context).size.width <= 1200
+                  ? const Radius.circular(0)
+                  : const Radius.circular(40),
+            ),
           ),
         ),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.only(top: 40, bottom: 33, right: 40, left: 40),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: RigthSectionHeader()),
-            SliverToBoxAdapter(
-              child: SizedBox(
+        child: const Padding(
+          padding: EdgeInsets.only(top: 40, bottom: 33, right: 40, left: 40),
+          child: Column(
+            children: [
+              RigthSectionHeader(),
+              SizedBox(
                 height: 38,
               ),
-            ),
-            SliverToBoxAdapter(child: BmiCalculatorsection()),
-            SliverToBoxAdapter(
-              child: SizedBox(
+              BmiCalculatorsection(),
+              SizedBox(
                 height: 40,
               ),
-            ),
-            SliverToBoxAdapter(
-              child: Divider(
+              Divider(
                 color: Color(0xFF4E4E4E),
               ),
-            ),
-            SliverToBoxAdapter(
-              child: SizedBox(
+              SizedBox(
                 height: 20,
               ),
-            ),
-            SliverToBoxAdapter(child: BodyMeasurements())
-          ],
+              BodyMeasurements()
+            ],
+          ),
         ),
       ),
     );

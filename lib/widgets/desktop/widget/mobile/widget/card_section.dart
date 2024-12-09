@@ -44,17 +44,25 @@ class CardSection extends StatelessWidget {
             ),
             Row(
               children: [
-                Text(
-                  overview.Quantity,
-                  style: Fontstyle.mulish_regular32(context)
-                      .copyWith(color: const Color(0xFF272927)),
+                Flexible(
+                  child: FittedBox(
+                    child: Text(
+                      overview.Quantity,
+                      style: Fontstyle.mulish_regular32(context)
+                          .copyWith(color: const Color(0xFF272927)),
+                    ),
+                  ),
                 ),
                 const SizedBox(
                   width: 8,
                 ),
-                Text(
-                  overview.Unit,
-                  style: Fontstyle.mulish_boled16(context),
+                Flexible(
+                  child: FittedBox(
+                    child: Text(
+                      overview.Unit,
+                      style: Fontstyle.mulish_boled16(context),
+                    ),
+                  ),
                 ),
               ],
             ),

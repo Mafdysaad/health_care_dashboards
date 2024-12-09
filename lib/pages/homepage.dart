@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:healthcare_dashborad/adaptive_layout/adaptive_layout.dart';
 import 'package:healthcare_dashborad/widgets/desktop/desktop_latyout.dart';
+import 'package:healthcare_dashborad/widgets/desktop/mobile_layout.dart';
+import 'package:healthcare_dashborad/widgets/desktop/tablet_layout.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/drawer/drawer.dart';
 
 class Homepage extends StatefulWidget {
@@ -15,8 +17,8 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: AdabtiveLayout(
-      MobileLayout: (context) => const SizedBox(),
-      TablietLayout: (context) => const SizedBox(),
+      MobileLayout: (context) => const MobileLayout(),
+      TablietLayout: (context) => const TabletLayout(),
       DesktopLayout: (context) => const DesktopLatyout(),
     ));
   }
