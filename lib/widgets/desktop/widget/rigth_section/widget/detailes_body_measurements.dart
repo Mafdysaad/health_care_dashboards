@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:healthcare_dashborad/model/body_measument.dart';
 import 'package:healthcare_dashborad/utils/fontstyle.dart';
 
@@ -28,9 +29,12 @@ class Detailes extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  list[index].title,
-                  style: Fontstyle.mulish_boled16(context),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    list[index].title,
+                    style: Fontstyle.mulish_boled16(context),
+                  ),
                 ),
                 const SizedBox(
                   height: 8,
@@ -38,16 +42,25 @@ class Detailes extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('${list[index].value}',
-                        style: Fontstyle.mulish_regular24(context)
-                            .copyWith(color: Colors.black)),
-                    const SizedBox(
-                      width: 8,
+                    Flexible(
+                      child: FittedBox(
+                        child: Text('${list[index].value}',
+                            style: Fontstyle.mulish_regular24(context)
+                                .copyWith(color: Colors.black)),
+                      ),
+                    ),
+                    const Flexible(
+                      child: SizedBox(
+                        width: 5,
+                      ),
                     ),
                     Transform.rotate(
                         angle:
                             list[index].color == Colors.red ? 1.5708 : -1.5708,
                         child: Icon(
+                          size: MediaQuery.of(context).size.width < 800
+                              ? 20
+                              : null,
                           Icons.arrow_back,
                           color: list[index].color,
                         )),

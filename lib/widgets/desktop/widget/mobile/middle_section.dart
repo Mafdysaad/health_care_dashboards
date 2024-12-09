@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:healthcare_dashborad/model/health_descraption.dart';
 
 import 'package:healthcare_dashborad/utils/images.dart';
+import 'package:healthcare_dashborad/utils/size_config.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/Upcoming_section.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/card_section.dart';
 
@@ -47,8 +48,12 @@ class MiddleSection extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(
               top: 52,
-              right: MediaQuery.of(context).size.width < 1200 ? 20 : 40,
-              left: MediaQuery.of(context).size.width < 1200 ? 20 : 40),
+              right: MediaQuery.of(context).size.width < SizeConfig.desctop
+                  ? 20
+                  : 40,
+              left: MediaQuery.of(context).size.width < SizeConfig.desctop
+                  ? 20
+                  : 40),
           child: Column(
             children: [
               const TitleHeader(),

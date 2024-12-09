@@ -8,40 +8,73 @@ class HeaderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Flexible(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 50),
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: Container(
-                decoration: ShapeDecoration(
-                  color: const Color(0xFFFBF0F3),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+    return MediaQuery.sizeOf(context).width < 500
+        ? Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 40),
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: Container(
+                    decoration: ShapeDecoration(
+                      color: const Color(0xFFFBF0F3),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: Image.asset(
+                      image,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-                child: Image.asset(
-                  image,
-                  fit: BoxFit.cover,
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              FittedBox(
+                child: Text(
+                  title,
+                  style: Fontstyle.mulish_semiboled16(context),
                 ),
               ),
-            ),
-          ),
-        ),
-        const SizedBox(
-          width: 16,
-        ),
-        Flexible(
-          child: FittedBox(
-            child: Text(
-              title,
-              style: Fontstyle.mulish_semiboled16(context),
-            ),
-          ),
-        ),
-      ],
-    );
+            ],
+          )
+        : Row(
+            children: [
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 50),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: Container(
+                      decoration: ShapeDecoration(
+                        color: const Color(0xFFFBF0F3),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Image.asset(
+                        image,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 16,
+              ),
+              Flexible(
+                child: FittedBox(
+                  child: Text(
+                    title,
+                    style: Fontstyle.mulish_semiboled16(context),
+                  ),
+                ),
+              ),
+            ],
+          );
   }
 }

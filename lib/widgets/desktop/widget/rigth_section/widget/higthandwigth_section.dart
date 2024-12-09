@@ -48,27 +48,22 @@ class _HigthandwigthState extends State<Higthandwigth> {
         ),
         child: Padding(
           padding: const EdgeInsets.only(left: 20, bottom: 20, top: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Column(
+          child: MediaQuery.sizeOf(context).width < 500
+              ? Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(
-                      height: 42 - 16,
+                      height: 8,
                     ),
-                    Text(
-                      widget.title,
-                      style: Fontstyle.mulish_regular16(context),
+                    FittedBox(
+                      child: Text(
+                        widget.title,
+                        style: Fontstyle.mulish_regular16(context),
+                      ),
                     ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
+                    const SizedBox(
+                      height: 8,
+                    ),
                     Gauges(
                       currentIndex: currentIndex,
                       controller: controller,
@@ -76,18 +71,58 @@ class _HigthandwigthState extends State<Higthandwigth> {
                     const SizedBox(
                       height: 4,
                     ),
-                    Text(
-                      '${currentIndex} ${widget.unit}',
-                      style: Fontstyle.mulish_regular16(context),
+                    FittedBox(
+                      child: Text(
+                        '${currentIndex} ${widget.unit}',
+                        style: Fontstyle.mulish_regular16(context),
+                      ),
                     ),
                   ],
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const SizedBox(
+                            height: 42 - 16,
+                          ),
+                          FittedBox(
+                            child: Text(
+                              widget.title,
+                              style: Fontstyle.mulish_regular16(context),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Gauges(
+                            currentIndex: currentIndex,
+                            controller: controller,
+                          ),
+                          const SizedBox(
+                            height: 4,
+                          ),
+                          FittedBox(
+                            child: Text(
+                              '${currentIndex} ${widget.unit}',
+                              style: Fontstyle.mulish_regular16(context),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    )
+                  ],
                 ),
-              ),
-              const SizedBox(
-                width: 20,
-              )
-            ],
-          ),
         ));
   }
 }

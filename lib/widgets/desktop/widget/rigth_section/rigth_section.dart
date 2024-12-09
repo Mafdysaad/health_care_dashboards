@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:healthcare_dashborad/utils/size_config.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/BmiCalculatorsection_section.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/Body_Measurements.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/rigth_section_header.dart';
@@ -20,12 +21,13 @@ class RigthSection extends StatelessWidget {
             ),
             borderRadius: BorderRadius.only(
               topLeft: const Radius.circular(40),
-              topRight: MediaQuery.of(context).size.width <= 1200
+              topRight: MediaQuery.of(context).size.width <= SizeConfig.desctop
                   ? const Radius.circular(40)
                   : const Radius.circular(0),
-              bottomLeft: MediaQuery.of(context).size.width <= 1200
-                  ? const Radius.circular(0)
-                  : const Radius.circular(40),
+              bottomLeft:
+                  MediaQuery.of(context).size.width <= SizeConfig.desctop
+                      ? const Radius.circular(0)
+                      : const Radius.circular(40),
             ),
           ),
         ),

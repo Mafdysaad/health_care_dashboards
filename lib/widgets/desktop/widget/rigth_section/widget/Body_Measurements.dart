@@ -13,9 +13,9 @@ class BodyMeasurements extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<BodyMeasument_model> list = [
-      BodyMeasument_model(title: 'Hip (in)', value: 42.5, color: Colors.green),
+      BodyMeasument_model(title: 'Hip (in)', value: 42, color: Colors.green),
       BodyMeasument_model(title: 'Waist (in)', value: 34, color: Colors.green),
-      BodyMeasument_model(title: ' Chest (in)', value: 44.5, color: Colors.red)
+      BodyMeasument_model(title: ' Chest (in)', value: 44, color: Colors.red)
     ];
     return Row(
       children: [

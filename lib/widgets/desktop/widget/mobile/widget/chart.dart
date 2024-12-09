@@ -122,7 +122,7 @@ BarChartData getdata(context) {
             fromY: Data[index]['2']['fromY'],
             toY: Data[index]['2']['toY'],
             width: 8,
-            color: const Color(0xFF468E95),
+            color: const Color.fromRGBO(70, 142, 149, 1),
           ),
           BarChartRodData(
             fromY: Data[index]['3']['fromY'],
@@ -298,5 +298,9 @@ BarChartData getdata(context) {
 
       borderData: FlBorderData(show: false),
       extraLinesData: const ExtraLinesData(),
-      barTouchData: BarTouchData());
+      //*************************** tochange the background of the label *** **********/
+      barTouchData: BarTouchData(
+          touchTooltipData: BarTouchTooltipData(
+        getTooltipColor: (group) => Colors.transparent,
+      )));
 }
