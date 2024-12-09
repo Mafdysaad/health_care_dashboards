@@ -8,11 +8,11 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 2, child: BarChart(getdata()));
+    return AspectRatio(aspectRatio: 2, child: BarChart(getdata(context)));
   }
 }
 
-BarChartData getdata() {
+BarChartData getdata(context) {
   List<Map> Data = [
     {
       '1': {'fromY': 0, 'toY': 25},
@@ -153,109 +153,109 @@ BarChartData getdata() {
                       angle: -0.785398,
                       child: Text(
                         'jan 1',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   1 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 2',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   2 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 3',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   3 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 4',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   4 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 5',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   5 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 6',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   6 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 7',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   7 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 8',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   8 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 9',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   9 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 10',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   10 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 11',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   11 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 12',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   12 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 13',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   13 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 14',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   14 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 15',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   15 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 16',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   16 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 17',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   17 => Transform.rotate(
                       angle: -0.785398,
                       child: Text(
                         'jan 18',
-                        style: Fontstyle.mulish_boled10,
+                        style: Fontstyle.mulish_boled10(context),
                       )),
                   _ => const Text(''),
                 },
@@ -274,11 +274,11 @@ BarChartData getdata() {
                 child: switch (value) {
                   20 => Text(
                       '% 20',
-                      style: Fontstyle.mulish_boled10,
+                      style: Fontstyle.mulish_boled10(context),
                     ),
-                  40 => Text('% 40', style: Fontstyle.mulish_boled10),
-                  60 => Text('% 60', style: Fontstyle.mulish_boled10),
-                  80 => Text('% 80', style: Fontstyle.mulish_boled10),
+                  40 => Text('% 40', style: Fontstyle.mulish_boled10(context)),
+                  60 => Text('% 60', style: Fontstyle.mulish_boled10(context)),
+                  80 => Text('% 80', style: Fontstyle.mulish_boled10(context)),
                   _ => const Text(''),
                 },
               );

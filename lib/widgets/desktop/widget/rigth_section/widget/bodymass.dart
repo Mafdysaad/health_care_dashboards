@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:healthcare_dashborad/utils/fontstyle.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/draggable%20_container.dart';
+import 'package:healthcare_dashborad/widgets/desktop/widget/rigth_section/widget/header_mass.dart';
 
 class Bodymass extends StatelessWidget {
   const Bodymass({super.key});
@@ -26,34 +27,14 @@ class Bodymass extends StatelessWidget {
               Row(children: [
                 Text(
                   'Body Mass Index (BMI)',
-                  style:
-                      Fontstyle.mulish_regular16.copyWith(color: Colors.white),
+                  style: Fontstyle.mulish_regular16(context)
+                      .copyWith(color: Colors.white),
                 ),
               ]),
               const SizedBox(
                 height: 22,
               ),
-              Row(
-                children: [
-                  Text(
-                    '24.9',
-                    style: Fontstyle.mulish_regular24,
-                  ),
-                  const Spacer(),
-                  Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 6),
-                      decoration: ShapeDecoration(
-                        color: const Color(0xFFD5FFDD),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
-                      child: Text(
-                        'You’re Healthy',
-                        style: Fontstyle.mulish_boled12,
-                      )),
-                ],
-              ),
+              const header_bodymass(),
               const SizedBox(
                 height: 22,
               ),
@@ -61,19 +42,6 @@ class Bodymass extends StatelessWidget {
                 width: constraints.maxWidth - 50,
                 item: valuse,
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: List.generate(valuse.length, (index) {
-                  return Text(
-                    valuse[index],
-                    style:
-                        Fontstyle.mulish_boled12.copyWith(color: Colors.white),
-                  );
-                }),
-              )
             ],
           ),
         ),

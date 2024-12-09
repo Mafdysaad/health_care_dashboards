@@ -24,7 +24,7 @@ class Custom_Dropdownmenue extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Fontstyle.mulish_regular16
+            style: Fontstyle.mulish_regular16(context)
                 .copyWith(color: titlecolor ?? const Color(0xFF383838)),
           ),
           const SizedBox(

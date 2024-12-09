@@ -25,23 +25,31 @@ class RigthSection extends StatelessWidget {
       ),
       child: const Padding(
         padding: EdgeInsets.only(top: 40, bottom: 33, right: 40, left: 40),
-        child: Column(
-          children: [
-            RigthSectionHeader(),
-            SizedBox(
-              height: 38,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(child: RigthSectionHeader()),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 38,
+              ),
             ),
-            BmiCalculatorsection(),
-            SizedBox(
-              height: 40,
+            SliverToBoxAdapter(child: BmiCalculatorsection()),
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 40,
+              ),
             ),
-            Divider(
-              color: Color(0xFF4E4E4E),
+            SliverToBoxAdapter(
+              child: Divider(
+                color: Color(0xFF4E4E4E),
+              ),
             ),
-            SizedBox(
-              height: 20,
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 20,
+              ),
             ),
-            BodyMeasurements(),
+            SliverToBoxAdapter(child: BodyMeasurements())
           ],
         ),
       ),

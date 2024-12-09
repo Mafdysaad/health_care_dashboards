@@ -11,7 +11,7 @@ class HeaderChart extends StatelessWidget {
       children: [
         Text(
           'Activity Growth',
-          style: Fontstyle.mulish_boled20,
+          style: Fontstyle.mulish_boled20(context),
         ),
         const Spacer(),
         const Custom_Dropdownmenue(

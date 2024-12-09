@@ -10,16 +10,24 @@ class HeaderCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
-          decoration: ShapeDecoration(
-            color: const Color(0xFFFBF0F3),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 50),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: const Color(0xFFFBF0F3),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Image.asset(
+                  image,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-          ),
-          child: Image.asset(
-            image,
-            fit: BoxFit.cover,
           ),
         ),
         const SizedBox(
@@ -27,7 +35,7 @@ class HeaderCard extends StatelessWidget {
         ),
         Text(
           title,
-          style: Fontstyle.mulish_semiboled16,
+          style: Fontstyle.mulish_semiboled16(context),
         ),
       ],
     );

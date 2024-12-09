@@ -20,7 +20,7 @@ class Reat extends StatelessWidget {
           )),
       child: Text(
         'Normal',
-        style: Fontstyle.mulish_semiboled12,
+        style: Fontstyle.mulish_semiboled12(context),
       ),
     );
   }

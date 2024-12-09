@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:healthcare_dashborad/model/health_descraption.dart';
-import 'package:healthcare_dashborad/utils/fontstyle.dart';
+
 import 'package:healthcare_dashborad/utils/images.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/Upcoming_section.dart';
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/card_section.dart';
-import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/chart.dart';
+
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/chart_section.dart';
-import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/container_icon.dart';
+
 import 'package:healthcare_dashborad/widgets/desktop/widget/mobile/widget/title_header.dart';
 
 class MobileLayour extends StatelessWidget {

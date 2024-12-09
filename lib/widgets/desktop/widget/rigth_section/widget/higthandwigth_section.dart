@@ -49,36 +49,43 @@ class _HigthandwigthState extends State<Higthandwigth> {
         child: Padding(
           padding: const EdgeInsets.only(left: 20, bottom: 20, top: 16),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const SizedBox(
-                    height: 42 - 16,
-                  ),
-                  Text(
-                    widget.title,
-                    style: Fontstyle.mulish_regular16,
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      height: 42 - 16,
+                    ),
+                    Text(
+                      widget.title,
+                      style: Fontstyle.mulish_regular16(context),
+                    ),
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Gauges(
-                    currentIndex: currentIndex,
-                    controller: controller,
-                  ),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                    '${currentIndex} ${widget.unit}',
-                    style: Fontstyle.mulish_regular16,
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Gauges(
+                      currentIndex: currentIndex,
+                      controller: controller,
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      '${currentIndex} ${widget.unit}',
+                      style: Fontstyle.mulish_regular16(context),
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(
+                width: 20,
+              )
             ],
           ),
         ));

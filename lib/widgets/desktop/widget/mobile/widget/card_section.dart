@@ -46,7 +46,7 @@ class CardSection extends StatelessWidget {
               children: [
                 Text(
                   overview.Quantity,
-                  style: Fontstyle.mulish_regular32
+                  style: Fontstyle.mulish_regular32(context)
                       .copyWith(color: const Color(0xFF272927)),
                 ),
                 const SizedBox(
@@ -54,7 +54,7 @@ class CardSection extends StatelessWidget {
                 ),
                 Text(
                   overview.Unit,
-                  style: Fontstyle.mulish_boled16,
+                  style: Fontstyle.mulish_boled16(context),
                 ),
               ],
             ),

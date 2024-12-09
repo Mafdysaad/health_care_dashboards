@@ -29,7 +29,7 @@ class UpcomingSection extends StatelessWidget {
           children: [
             Text(
               'Upcoming Appointment',
-              style: Fontstyle.mulish_boled20,
+              style: Fontstyle.mulish_boled20(context),
             ),
             Container(
                 padding: const EdgeInsets.all(8),
@@ -41,12 +41,12 @@ class UpcomingSection extends StatelessWidget {
                 child: Center(
                   child: Text(
                     'August 14, 2021',
-                    style: Fontstyle.mulish_boled12,
+                    style: Fontstyle.mulish_boled12(context),
                   ),
                 )),
             Text(
               'Consultation with Dr. James',
-              style: Fontstyle.mulish_regular16,
+              style: Fontstyle.mulish_regular16(context),
             )
           ],
         ),

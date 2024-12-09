@@ -14,14 +14,14 @@ class TitleHeader extends StatelessWidget {
           children: [
             Text(
               'Health Overview',
-              style: Fontstyle.mulish_boled28,
+              style: Fontstyle.mulish_boled28(context),
             ),
             const SizedBox(
               height: 8,
             ),
             Text(
               'August 12, 2021',
-              style: Fontstyle.mulish_semiboled16,
+              style: Fontstyle.mulish_semiboled16(context),
             )
           ],
         ),

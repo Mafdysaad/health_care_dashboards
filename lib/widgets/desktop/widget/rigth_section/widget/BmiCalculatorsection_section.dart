@@ -30,6 +30,9 @@ class BmiCalculatorsection extends StatelessWidget {
             ),
           ],
         )),
+        SizedBox(
+          width: 20,
+        ),
         Expanded(flex: 2, child: Bodymass())
       ],
     );

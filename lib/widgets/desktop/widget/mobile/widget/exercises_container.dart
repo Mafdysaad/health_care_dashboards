@@ -22,7 +22,7 @@ class ExercisesContainers extends StatelessWidget {
       ),
       Text(
         exercises.title,
-        style: Fontstyle.mulish_semiboled12.copyWith(
+        style: Fontstyle.mulish_semiboled12(context).copyWith(
           color: const Color(0xFF383838),
           fontWeight: FontWeight.w400,
         ),

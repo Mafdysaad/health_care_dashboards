@@ -11,7 +11,7 @@ class RigthSectionHeader extends StatelessWidget {
       children: [
         Text(
           'BMI Calculator',
-          style: Fontstyle.mulish_regular22,
+          style: Fontstyle.mulish_regular22(context),
         ),
         const Spacer(),
         const Custom_Dropdownmenue(

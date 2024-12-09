@@ -5,10 +5,10 @@ class Assets {
   /// Assets for assetsImagesBlood Pressure
   /// assets/images/Blood Pressure.svg
   static const String assetsImagesBloodPressure =
-      "assets/images/Blood_Pressure.svg";
+      "assets/images/Blood Pressure.svg";
 
   /// Assets for assetsImagesBloodPresse
-  /// assets/images/blood_presse.png
+  /// assets/images/blood_presse.png>
   static const String assetsImagesBloodPresse =
       "assets/images/blood_presse.png";
 
@@ -28,6 +28,10 @@ class Assets {
   /// assets/images/chate.svg
   static const String assetsImagesChate = "assets/images/chate.svg";
 
+  /// Assets for assetsImagesCircular
+  /// assets/images/circular.png
+  static const String assetsImagesCircular = "assets/images/circular.png";
+
   /// Assets for assetsImagesFrame
   /// assets/images/Frame.svg
   static const String assetsImagesFrame = "assets/images/Frame.svg";
@@ -35,6 +39,10 @@ class Assets {
   /// Assets for assetsImagesGradual
   /// assets/images/Gradual.png
   static const String assetsImagesGradual = "assets/images/Gradual.png";
+
+  /// Assets for assetsImagesHead
+  /// assets/images/head.png
+  static const String assetsImagesHead = "assets/images/head.png";
 
   /// Assets for assetsImagesHeart
   /// assets/images/heart.svg
@@ -44,9 +52,21 @@ class Assets {
   /// assets/images/heart_rate.png
   static const String assetsImagesHeartRate = "assets/images/heart_rate.png";
 
+  /// Assets for assetsImagesImage
+  /// assets/images/image.svg
+  static const String assetsImagesImage = "assets/images/image.svg";
+
   /// Assets for assetsImagesLogout
   /// assets/images/logout.svg
   static const String assetsImagesLogout = "assets/images/logout.svg";
+
+  /// Assets for assetsImagesMale
+  /// assets/images/male.svg
+  static const String assetsImagesMale = "assets/images/male.svg";
+
+  /// Assets for assetsImagesPage1
+  /// assets/images/Page-1.svg
+  static const String assetsImagesPage1 = "assets/images/Page-1.svg";
 
   /// Assets for assetsImagesSetting
   /// assets/images/setting.svg
